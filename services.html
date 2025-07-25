@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="icon" type="image/png" href="images/favicon.png" />
+	<!-- ✅ SEO -->
+	<title>Services | Start Digitize – Social Media, Graphic Design & Printing</title>
+	<meta name="description" content="Explore all Start Digitize services: strategic social media marketing, eye‑catching graphic design, and premium branding & printing solutions for businesses of every size.">
+	<meta name="keywords" content="social media marketing, content creation, instagram ads, graphic design services, logo design, banner printing, brochure printing Pune, branding solutions">  
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+    	<a href="index.html" class="logo">
+  		<img src="images/logo.png" alt="Start Digitize Logo">
+	</a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="page-banner top-offset" style="background-image: url('images/services-banner.jpg');">
+  <div class="container">
+    <h2 class="section-title">Our Services</h2>
+    <p class="subtitle">Digital Marketing | Designing | Printing</p>
+  </div>
+</section>
+
+<section class="services animate top-offset section-spacing">
+  <div class="container">
+
+    <!-- SECTION 1: Social Media (Image Left) -->
+<div class="service-block">
+  <div class="service-content image-left">
+    <div class="service-img">
+      <img src="images/social.jpg" alt="Social Media Marketing">
+    </div>
+    <div class="service-text">
+      <h3>📱 Social Media Marketing</h3>
+      <p>While running an early stage startup everything feels hard, that’s why it’s been so nice to have our accounting feel easy. We recommend Qetus.</p>
+      <ul>
+        <li>Content Creation</li>
+        <li>Posting</li>
+        <li>Branding Of Images</li>
+        <li>Page Branding</li>
+        <li>Analyzing the Plan</li>
+        <li>Monitor Daily</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 2: Graphic Design (Image Right) -->
+<div class="service-block section-spacing">
+  <div class="service-content image-right">
+    <div class="service-img">
+      <img src="images/graphic.jpg" alt="Graphic Designing">
+    </div>
+    <div class="service-text">
+      <h3>🎨 Graphic Designing</h3>
+      <p>Need Graphic Design?</p>
+      <ul>
+        <li>Logo</li>
+        <li>Banner</li>
+        <li>Social Media Post Design</li>
+        <li>Emailer</li>
+        <li>Visiting Cards</li>
+        <li>Flyers</li>
+        <li>Standee Banner</li>
+        <li>Billboard Designs</li>
+        <li>Brochures etc</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 3: Printing (Image Left again) -->
+<div class="service-block section-spacing">
+  <div class="service-content image-left">
+    <div class="service-img">
+      <img src="images/printing.jpg" alt="Branding & Printing">
+    </div>
+    <div class="service-text">
+      <h3>🖨️ Branding & Printing</h3>
+      <p>High-quality brochures, flyers & more</p>
+      <ul>
+        <li>Visiting Cards</li>
+        <li>Banner</li>
+        <li>Standee</li>
+        <li>Flyers</li>
+        <li>Menu Cards</li>
+        <li>Brochures</li>
+        <li>And Many More</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<footer><div class="container">© 2025 Start Digitize</div></footer>
+
+<script>
+  const elements = document.querySelectorAll('.animate');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target); // Animate once
+      }
+    });
+  }, { threshold: 0.2 });
+
+  elements.forEach(el => observer.observe(el));
+</script>
+
+<!-- ✅ Floating WhatsApp Button -->
+<div class="whatsapp-float">
+  <a href="https://wa.me/918668446538" target="_blank" aria-label="WhatsApp Chat">
+    <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp">
+  </a>
+</div>
+
+</body>
+</html>
