@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <title>Our Team | Start Digitize</title>
+  <meta name="description" content="Meet the creative minds behind Start Digitize. Our team brings expertise in design, marketing, content creation, and digital strategy to grow your brand." />
+  <meta name="keywords" content="Start Digitize team, digital experts, graphic design team, marketing professionals Pune" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Start Digitize Logo">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ✅ Banner -->
+<section class="page-banner top-offset" style="background-image: url('images/team-banner.jpg');">
+  <div class="container">
+    <h2 class="section-title">Meet Our Team</h2>
+    <p class="subtitle">Creative minds behind your success</p>
+  </div>
+</section>
+
+<!-- ✅ Team Section -->
+<section class="team-section animate section-spacing">
+  <div class="container team-grid">
+
+    <div class="team-card">
+      <img src="images/team1.jpg" alt="Team Member 1">
+      <h3>Manasi Bothara</h3>
+      <p class="role">Content Creator</p>
+      <p class="bio">Creates content that connects, converts, and inspires.</p>
+    </div>
+
+    <div class="team-card">
+      <img src="images/team2.jpg" alt="Team Member 2">
+      <h3>Priya Sharma</h3>
+      <p class="role">Founder\Graphic Designer</p>
+      <p class="bio">Transforms ideas into stunning visuals and brand identities.</p>
+    </div>
+
+    <div class="team-card">
+      <img src="images/team3.jpg" alt="Team Member 3">
+      <h3>Abhishek Sarolkar</h3>
+      <p class="role">Social Handler</p>
+      <p class="bio">Expert in digital strategy and social growth through smart content.</p>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">© 2025 Start Digitize</div>
+</footer>
+
+<script>
+  const elements = document.querySelectorAll('.animate');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  elements.forEach(el => observer.observe(el));
+</script>
+
+<!-- ✅ Floating WhatsApp Button -->
+<div class="whatsapp-float">
+  <a href="https://wa.me/918668446538" target="_blank" aria-label="WhatsApp Chat">
+    <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp">
+  </a>
+</div>
+
+</body>
+</html>
