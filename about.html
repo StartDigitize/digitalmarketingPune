@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <!-- ✅ SEO -->
+  <title>About Us | Start Digitize – Your Growth Partner in Marketing</title>
+  <meta name="description" content="Learn about Start Digitize: our vision, mission, and core values that drive creative marketing, design, and print solutions for startups and established brands alike.">
+  <meta name="keywords" content="about Start Digitize, marketing team Pune, digital agency mission, creative vision, marketing company values">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Start Digitize Logo">
+    </a>
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ✅ Page Banner -->
+<section class="page-banner top-offset section-spacing" style="background-image: url('images/about-banner.jpg');">
+  <div class="container">
+    <h2 class="section-title">About Us</h2>
+    <p class="subtitle">Learn more about our journey, team and vision</p>
+  </div>
+</section>
+
+<!-- ✅ WHO WE ARE -->
+<section class="who-we-are-section section-spacing">
+  <div class="container who-we-are-flex">
+
+    <!-- Left: Text -->
+    <div class="who-we-are-text">
+      <h2>Who We Are</h2>
+      <p>
+        At <strong>Start Digitize</strong>, we are passionate about helping businesses grow through smart, creative, and result-driven digital marketing solutions.
+        Whether you're a startup or an established brand, we provide a one-stop shop for marketing, design, and printing that connects your business with your audience.
+      </p>
+      <p>
+        With a commitment to quality, speed, and creativity, we go beyond just services — we build partnerships that grow with your brand.
+      </p>
+    </div>
+
+    <!-- Right: Images -->
+    <div class="who-we-are-images">
+      <img src="images/team4.jpg" class="img-back" alt="Team Image 1">
+      <img src="images/team5.jpg" class="img-front" alt="Team Image 2">
+    </div>
+
+  </div>
+</section>
+
+<!-- ✅ Vision, Values, Mission -->
+<section class="section-spacing">
+  <div class="container about-cards">
+
+    <!-- Vision -->
+    <div class="about-card animate">
+      <img src="images/vision.jpg" alt="Vision Image" class="card-img">
+      <div class="card-content">
+        <h3>🎯 Our Vision</h3>
+        <p>
+          To be the most trusted and creative marketing partner for growing businesses across India — transforming ideas into identity and visibility.
+        </p>
+      </div>
+    </div>
+
+    <!-- Core Values -->
+    <div class="about-card animate">
+      <div class="card-content full-card">
+        <h3>💡 Our Core Values</h3>
+        <p>
+          We are a software development company and digital transformation consultancy that provides solutions to complex issues of client's business.
+        </p>
+        <ul>
+          <li>✔️ Integrity</li>
+          <li>✔️ Commitment to Excellence</li>
+          <li>✔️ Consumer Focus</li>
+          <li>✔️ Accountability</li>
+          <li>✔️ Inclusiveness</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Mission -->
+    <div class="about-card animate">
+      <div class="card-content">
+        <h3>🚀 Our Mission</h3>
+        <p>
+          To empower small and mid-sized businesses with top-tier digital marketing, visual branding, and impactful print solutions — all under one roof.
+        </p>
+      </div>
+      <img src="images/mission.jpg" alt="Mission Image" class="card-img">
+    </div>
+
+  </div>
+</section>
+
+<!-- ✅ Footer -->
+<footer><div class="container">© 2025 Start Digitize</div></footer>
+
+<!-- ✅ Animation Script -->
+<script>
+  const elements = document.querySelectorAll('.animate');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  elements.forEach(el => observer.observe(el));
+</script>
+
+<!-- ✅ Floating WhatsApp Button -->
+<div class="whatsapp-float">
+  <a href="https://wa.me/918668446538" target="_blank" aria-label="WhatsApp Chat">
+    <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp">
+  </a>
+</div>
+
+</body>
+</html>
