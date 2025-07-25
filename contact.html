@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <title>Contact Us | Start Digitize – Let’s Grow Your Brand</title>
+  <meta name="description" content="Have a project in mind? Contact Start Digitize for expert social media marketing, graphic design, and printing services. Let’s build your brand together.">
+  <meta name="keywords" content="contact Start Digitize, marketing quote Pune, design inquiry, printing services contact, WhatsApp marketing agency">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Start Digitize Logo">
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!---------------------------------------------------------------- PAGE BANNER -->
+<section class="page-banner top-offset" style="background-image: url('images/contact-banner.jpg');">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p class="subtitle">We’d love to hear from you – let’s connect!</p>
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-page animate">
+  <div class="container contact-flex">
+
+    <!---------------------------------------------------------------- LEFT SIDE ---------------------------------------------------------------->
+    <div class="contact-info">
+      <h2 class="contact-heading">Get In Touch</h2>
+      <p><strong>Address:</strong><br>
+        Sr. No. 110/111, Shantinagar, Tankt Rd,<br>
+        Yerawada, Pune 06
+      </p>
+      <p><strong>Email:</strong><br>
+        <a href="mailto:startdigitize2k19@gmail.com">startdigitize2k19@gmail.com</a>
+      </p>
+      <p><strong>Phone / WhatsApp:</strong><br>
+        <a href="https://wa.me/918668446538" target="_blank">+91 8668446538</a>
+      </p>
+
+      <!---------------------------------------------------------------- ✅ Correct Embedded Map ---------------------------------------------------------------->
+      <div class="map-box">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1163.4428072226037!2d73.87650886962285!3d18.568966570196814!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c133f6990dfd%3A0x4f53e11575556029!2sStart%20Digitize%20Digital%20marketing%20Agency%20Pune!5e1!3m2!1sen!2sin!4v1751825716878!5m2!1sen!2sin" 
+          width="100%" 
+          height="300" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+    <!---------------------------------------------------------------- RIGHT SIDE: FORM ---------------------------------------------------------------->
+    <div class="contact-form-box">
+  		<h2 class="contact-heading">Send a Message</h2>
+
+  		<form id="contact-form" class="contact-form">
+    			<!--  ⬇️  use EmailJS variable names -->
+    			<input type="text" name="from_name"  placeholder="Your Name"  required>
+    			<input type="email" name="from_email" placeholder="Your Email" required>
+
+    				<select name="service">
+      					<option value="" disabled selected>Select a Service</option>
+      					<option>Social Media Marketing</option>
+      					<option>Graphic Designing</option>
+      					<option>Branding & Printing</option>
+    				</select>
+
+    				<textarea name="message" rows="5" placeholder="Your Message…" required></textarea>
+
+    			<button type="submit" class="btn btn-send">Send</button>
+  		</form>
+
+  		<!-- where success / error text appears -->
+   		<p id="form-msg" style="margin-top:1rem;"></p>
+     </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer><div class="container">© 2025 Start Digitize</div></footer>
+
+<!---------------------------------------------------------------- WHATSAPP FLOATING BUTTON ---------------------------------------------------------------->
+<a href="https://wa.me/918668446538" class="whatsapp-float" target="_blank" title="Chat with us">
+  <img src="images/whatsapp-icon.png" alt="WhatsApp" width="50" />
+</a>
+
+<script>
+  const elements = document.querySelectorAll('.animate');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  elements.forEach(el => observer.observe(el));
+</script>
+
+<!---------------------------------------------------------------- EmailJS SDK ---------------------------------------------------------------->
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+  /*  Initialise EmailJS  */
+  (function(){
+    emailjs.init("YOUR_PUBLIC_KEY");   //  <-- replace with your Public Key
+  })();
+
+  /*  Handle form submit  */
+  document.getElementById("contact-form").addEventListener("submit", function (e) {
+    e.preventDefault();                        // stop normal POST
+
+    emailjs.sendForm("YOUR_SERVICE_ID",        // <- replace
+                     "YOUR_TEMPLATE_ID",       // <- replace
+                     this)
+    .then(() => {
+      document.getElementById("form-msg").textContent = "✅ Message sent! We’ll reply soon.";
+      document.getElementById("form-msg").style.color = "green";
+      this.reset();
+    })
+    .catch((err) => {
+      console.error("EmailJS error:", err);
+      document.getElementById("form-msg").textContent = "❌ Sorry, message failed. Please try again.";
+      document.getElementById("form-msg").style.color = "red";
+    });
+  });
+</script>
+
+</body>
+</html>
