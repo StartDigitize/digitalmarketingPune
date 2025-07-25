@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="icon" type="image/png" href="images/favicon.png" />
+  <title>Our Work | Start Digitize Portfolio & Case Studies</title>
+  <meta name="description" content="See how Start Digitize delivers real impact through social campaigns, creative designs, and premium print projects. Browse our latest case studies and portfolio highlights." />
+  <meta name="keywords" content="marketing portfolio, design case studies, social media results, print projects, Start Digitize work, Pune agency portfolio" />
+  
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container nav-container">
+    <a href="index.html" class="logo">
+      <img src="images/logo.png" alt="Start Digitize Logo" />
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- 🔷 PAGE BANNER -->
+<section class="page-banner top-offset" style="background-image: url('images/work-banner.jpg');">
+  <div class="container">
+    <h1>What We've Done</h1>
+    <p class="subtitle">Explore our creative impact & real results</p>
+  </div>
+</section>
+
+<!-- 🔷 INTRO -->
+<section class="work-intro animate section-spacing">
+  <div class="container">
+    <h2 class="section-title">From Ideas to Execution</h2>
+    <p>
+      Every project we take on is a reflection of our passion, creativity, and commitment to client success. Here’s a glimpse at the work we've done across digital marketing, branding, design, and print.
+    </p>
+  </div>
+</section>
+
+<!-- 🔷 WORK SHOWCASE -->
+<section class="our-work animate">
+  <div class="container">
+    <h2 class="section-title">Our Recent Work</h2>
+    <div class="work-grid">
+      
+      <div class="work-card">
+        <img src="images/work1.jpg" alt="Instagram Growth" />
+        <h3>Instagram Growth Campaign</h3>
+        <p>Boosted a local brand's IG reach by 250% in 4 weeks with content strategy and reels.</p>
+      </div>
+
+      <div class="work-card">
+        <img src="images/work2.jpg" alt="Flyer Design" />
+        <h3>Event Flyer & Poster</h3>
+        <p>Designed vibrant promotional materials for a youth tech festival in Pune.</p>
+      </div>
+
+      <div class="work-card">
+        <img src="images/work3.jpg" alt="Brochure Printing" />
+        <h3>Real Estate Brochure Print</h3>
+        <p>Premium trifold brochures printed for a top property developer in Yerawada.</p>
+      </div>
+
+      <div class="work-card">
+        <img src="images/work4.jpg" alt="Brand Identity" />
+        <h3>Complete Brand Identity</h3>
+        <p>Created a logo, color system & social branding kit for a wellness startup.</p>
+      </div>
+
+      <div class="work-card">
+        <img src="images/work5.jpg" alt="Business Card Design" />
+        <h3>Business Card Design</h3>
+        <p>Designed 300+ custom cards across 8 businesses with unique brand styles.</p>
+      </div>
+
+      <div class="work-card">
+        <img src="images/work6.jpg" alt="Menu Design & Print" />
+        <h3>Menu Design & Print</h3>
+        <p>Modern and readable menu cards for a cafe chain, printed on matte stock.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© 2025 Start Digitize</div>
+</footer>
+
+<script>
+  const elements = document.querySelectorAll('.animate');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  elements.forEach(el => observer.observe(el));
+</script>
+
+<!-- ✅ Floating WhatsApp Button -->
+<div class="whatsapp-float">
+  <a href="https://wa.me/918668446538" target="_blank" aria-label="WhatsApp Chat">
+    <img src="images/whatsapp-icon.png" alt="Chat on WhatsApp">
+  </a>
+</div>
+
+</body>
+</html>
